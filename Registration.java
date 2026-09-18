@@ -16,8 +16,8 @@ class Registration {
     
     public boolean checkUserName(String username){
         return username.contains("_")&& username.length()==8;
-    }
-    // end of the userName Method
+    }// end of the userName Method
+    
     public boolean checkPassWordComplexity(String password){
         if(password.length() >=8 && 
                 password.matches(".*[A-Z].*")&&
@@ -28,7 +28,7 @@ class Registration {
         }else{
             return false;
         }
-    }
+    } //end of check username method
     
     public boolean checkCellPhoneNumber(String phoneNumber){
         if(phoneNumber.matches(".*\\+27[0-9]{9}.*")&& 
@@ -37,7 +37,7 @@ class Registration {
         }else{
             return false;
         }
-    }
+    } //end of check cellphone number method
     
     public String registerUser(String username, 
             String password, 
@@ -49,7 +49,7 @@ class Registration {
             
             this.username = username;
             this.password = password;
-            this.phoneNumber = phoneNumber;
+            this.phoneNumber = phoneNumber; 
             return"registration was a success";
         }else{
             return "registration was unsuccessful";
